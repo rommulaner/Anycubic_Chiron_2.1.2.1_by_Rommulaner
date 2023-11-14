@@ -38,7 +38,7 @@
 //#define CHIRON_CLASSIC_JERK_TMC2208_STANDALONE
 //#define CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_S_CURVE
 //#define CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_ADAPTIVE_STEP_SMOOTHING
-//#define CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_S_CURVE_ADAPTIVE_STEP_SMOOTHING
+//define CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_S_CURVE_ADAPTIVE_STEP_SMOOTHING
 //#define CHIRON_LINEAR_ADVANCE
 //#define CHIRON_LINEAR_ADVANCE_ADAPTIVE_STEP_SMOOTHING
 #define CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE
@@ -92,7 +92,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Rommulaner, Chiron Build)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Rommulaner, Anycubic Chiron 2.0.9 bugfix)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1071,7 +1071,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 150, 150, 25, 80 }
+#define DEFAULT_MAX_FEEDRATE          { 225, 180, 25, 45 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1099,8 +1099,8 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          800    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
+#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -1113,7 +1113,7 @@
  */
 #define CLASSIC_JERK
 
-#if ANY (CHIRON_LINEAR_ADVANCE, CHIRON_LINEAR_ADVANCE_ADAPTIVE_STEP_SMOOTHING, CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE, CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE_ADAPTIVE_STEP_SMOOTHING)
+#if ANY(CHIRON_LINEAR_ADVANCE, CHIRON_LINEAR_ADVANCE_ADAPTIVE_STEP_SMOOTHING, CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE, CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE_ADAPTIVE_STEP_SMOOTHING)
   #undef CLASSIC_JERK
 #endif
 
@@ -1416,7 +1416,7 @@
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     3 // Z Clearance between multiple probes
+#define Z_CLEARANCE_MULTI_PROBE     2 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT         -10 // Farthest distance below the trigger-point to go before stopping
