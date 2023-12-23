@@ -117,11 +117,11 @@
 #define MARLIN_msg_filament_purging    PSTR("Filament Purging...")
 #define MARLIN_msg_special_pause       PSTR("PB")
 
-#define AC_cmnd_auto_unload_filament   F("M701")                    // Use Marlin unload routine
-#define AC_cmnd_auto_load_filament     F("M702 M0 PB")              // Use Marlin load routing then pause for user to clean nozzle
+#define AC_cmnd_auto_unload_filament   F("M702")                    // was M701 Use //Marlin unload routine
+#define AC_cmnd_auto_load_filament     F("M701 M0 PB")              // was M702 M0 PB //Use Marlin load routing then pause for user to clean nozzle
 
-#define AC_cmnd_manual_load_filament   F("M83\nG1 E50 F700\nM82")   // replace the manual panel commands with something a little faster
-#define AC_cmnd_manual_unload_filament F("M83\nG1 E-50 F1200\nM82")
+#define AC_cmnd_manual_load_filament   F("M701 M0 PB")              // replace the manual panel commands with something a little faster
+#define AC_cmnd_manual_unload_filament F("M702")                    // was M83\nG1 E-50 F1200\nM82
 #define AC_cmnd_enable_leveling        F("M420SV")
 #define AC_cmnd_power_loss_recovery    F("G28XYR5\nG28Z")           // Lift, home X and Y then home Z when in 'safe' position
 

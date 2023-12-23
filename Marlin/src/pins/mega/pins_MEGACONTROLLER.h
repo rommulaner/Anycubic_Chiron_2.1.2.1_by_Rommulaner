@@ -23,10 +23,13 @@
 
 /**
  * Mega controller pin assignments
+ * Schematic: https://green-candy.osdn.jp/external/MarlinFW/board_schematics/Mega%20Controller/Mega_controller.pdf
+ * Origin: https://reprap.org/mediawiki/images/b/ba/Mega_controller.pdf
+ * ATmega2560
  */
 
 #if HOTENDS > 2 || E_STEPPERS > 2
-  #error "Mega Controller supports up to 2 hotends / E-steppers. Comment out this line to continue."
+  #error "Mega Controller supports up to 2 hotends / E steppers."
 #endif
 
 #include "env_validate.h"

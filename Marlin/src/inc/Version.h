@@ -25,7 +25,7 @@
  * Release version. Leave the Marlin version or apply a custom scheme.
  */
 #ifndef SHORT_BUILD_VERSION
-  #define SHORT_BUILD_VERSION "2.0.9 Bugfix"
+  #define SHORT_BUILD_VERSION "2.1.2.1"
 #endif
 
 /**
@@ -33,33 +33,7 @@
  * vendor name, download location, GitHub account, etc.
  */
 #ifndef DETAILED_BUILD_VERSION
-  #if ENABLED(CHIRON_CLASSIC_JERK)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ"
-  #elif defined(CHIRON_CLASSIC_JERK_S_CURVE)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ SC"
-  #elif defined(CHIRON_CLASSIC_JERK_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ ASS"
-  #elif defined(CHIRON_CLASSIC_JERK_S_CURVE_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ SC ASS"
-  #elif defined(CHIRON_CLASSIC_JERK_TMC2208_STANDALONE)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ TMC"
-  #elif defined(CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_S_CURVE)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ TMC SC"
-  #elif defined(CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ TMC ASS"
-  #elif defined(CHIRON_CLASSIC_JERK_TMC2208_STANDALONE_S_CURVE_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix CJ TMC SC ASS"
-  #elif defined(CHIRON_LINEAR_ADVANCE)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix LA"
-  #elif defined(CHIRON_LINEAR_ADVANCE_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix LA ASS"
-  #elif defined(CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix LA TMC"
-  #elif defined(CHIRON_LINEAR_ADVANCE_TMC2208_STANDALONE_ADAPTIVE_STEP_SMOOTHING)
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix LA TMC ASS"
-  #else
-    #define DETAILED_BUILD_VERSION  "2.0.9 Bugfix Classic Jerk"
-  #endif
+  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION
 #endif
 
 /**
@@ -68,7 +42,7 @@
  * version was tagged.
  */
 #ifndef STRING_DISTRIBUTION_DATE
-  #define STRING_DISTRIBUTION_DATE "2022-05-01"
+  #define STRING_DISTRIBUTION_DATE "2023-05-16"
 #endif
 
 /**
@@ -78,7 +52,7 @@
  * to alert users to major changes.
  */
 
-#define MARLIN_HEX_VERSION 02010000
+#define MARLIN_HEX_VERSION 02010201
 #ifndef REQUIRED_CONFIGURATION_H_VERSION
   #define REQUIRED_CONFIGURATION_H_VERSION MARLIN_HEX_VERSION
 #endif

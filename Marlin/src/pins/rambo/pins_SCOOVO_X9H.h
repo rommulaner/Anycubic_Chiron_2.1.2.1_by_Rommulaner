@@ -25,7 +25,7 @@
  * Rambo pin assignments MODIFIED FOR Scoovo X9H
  ************************************************/
 
-#include "env_target.h"
+#include "env_validate.h"
 
 #define BOARD_INFO_NAME "Scoovo X9H"
 
@@ -143,7 +143,7 @@
 
 #define HOME_PIN                        BTN_HOME
 
-#if ANY(VIKI2, miniVIKI)
+#if EITHER(VIKI2, miniVIKI)
   #define BEEPER_PIN                          44
   // Pins for DOGM SPI LCD Support
   #define DOGLCD_A0                           70
